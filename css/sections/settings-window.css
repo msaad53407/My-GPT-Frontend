@@ -1,0 +1,128 @@
+.sidebar__settings-window {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 13px;
+  padding: 15px;
+  width: 80%;
+  height: fit-content;
+  overflow: hidden;
+  flex-wrap: wrap;
+  margin: auto;
+  bottom: 6%;
+  left: 10%;
+}
+
+.sidebar__settings-window.active {
+  display: flex;
+}
+
+.sidebar__settings.button {
+  padding: 8px 18px;
+  color: #fff;
+  font-family: var(--inconsolata);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+
+.sidebar__settings-image {
+  cursor: pointer;
+}
+
+.sidebar__file-selector {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 5px auto;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.sidebar__personal-name label {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar__personal-name label p {
+  font-family: var(--inconsolata);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: black;
+}
+
+.sidebar__personal-name label input {
+  outline: none;
+  border: 2px solid var(--sidebar-color);
+  border-radius: 10px;
+  padding: 3px 10px;
+}
+
+.sidebar__personal-name label input:hover,
+.sidebar__personal-name label input:active {
+  box-shadow: 0 0 7px var(--app-background);
+}
+
+.sidebar__image-selector {
+  position: absolute;
+  display: none;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 15px;
+  background: #fff;
+  height: fit-content;
+  bottom: 26%;
+  left: 10%;
+  width: 80%;
+  border-radius: 13px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar__image-selector.active {
+  display: flex;
+}
+
+.sidebar__images-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.sidebar__image-container {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--sidebar-color);
+  box-shadow: 0 0 10px var(--app-background);
+  cursor: pointer;
+}
+
+.sidebar__image-selector img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+[data-active] {
+  box-shadow: 0 0 10px var(--green);
+  border: 1px solid var(--green);
+}
+
+.sidebar__settings-select-button:disabled {
+  background-color: rgb(162, 35, 35);
+  cursor: not-allowed;
+}

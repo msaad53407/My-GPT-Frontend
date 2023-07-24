@@ -1,0 +1,103 @@
+.chats__window {
+  width: 59.6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 98vh;
+  background-color: var(--chat-window-color);
+  border-radius: 13px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.chats__window-new-chat {
+  background-color: green;
+  padding: 15px 30px;
+  min-width: 200px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px black;
+  border: 1px outset black;
+  position: absolute;
+  top: 45%;
+  right: 35%;
+}
+
+.chats__window-new-chat.hide {
+  display: none;
+}
+
+.chats__bottom-bar {
+  background-color: var(--sidebar-color);
+  width: 70%;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin: 15px auto;
+  padding: 10px 10px 10px 20px;
+  gap: 15px;
+}
+
+.chats__bottom-bar-input {
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 90%;
+  height: 100%;
+  color: #ffffffbf;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--inconsolata);
+}
+
+.chats__bottom-bar-send-icon {
+  width: 7%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 100%;
+  background: transparent;
+}
+
+.chats__bottom-bar-send-icon:hover {
+  background: var(--chat-window-color);
+}
+
+.chats__bottom-bar-send-icon img {
+  object-fit: contain;
+}
+
+.chats__window-clock {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: flex;
+  height: 32px;
+  width: fit-content;
+  background-color: var(--chat-window-color);
+  box-shadow: 0 0 5px #fff;
+  border-radius: 13px;
+  color: white;
+  justify-content: center;
+  padding: 15px 20px;
+  transform: translateY(-50px);
+  transition: transform 0.3s linear;
+}
+
+.chats__window-clock.visible {
+  transform: translateY(0px);
+}
+
+.chats__window-clock-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-family: var(--inconsolata);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+}

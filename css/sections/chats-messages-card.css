@@ -1,0 +1,115 @@
+.chats__messages {
+  height: 87%;
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 10px auto;
+}
+
+.chats__messages::-webkit-scrollbar {
+  opacity: 0;
+  visibility: hidden;
+  width: 3px;
+}
+
+.chats__messages::-webkit-progress-bar {
+  background-color: var(--app-background);
+}
+
+.chats__messages::-webkit-scrollbar-track {
+  background-color: var(--app-background);
+}
+
+.chats__messages::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar-color);
+}
+
+.chats__messages-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 60%;
+  min-width: 30%;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  justify-content: center;
+  background-color: var(--sidebar-color);
+  margin-top: 40px;
+  padding: 18px;
+}
+
+.chats__messages-card.user-card {
+  align-self: flex-end;
+  border-radius: 35px 0 35px 35px;
+}
+
+.chats__messages-card.ai-card {
+  align-self: flex-start;
+  border-radius: 0 35px 35px 35px;
+}
+
+.chats__messages__profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chats__messages__profile-avatar {
+  background: transparent;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--chat-window-color);
+  box-shadow: 0px 0px 10px #ffffff8b;
+}
+
+.chats__messages__profile-avatar img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.chats__messages-card.user-card
+  > .chats__messages__profile
+  > .chats__messages__profile-avatar {
+  order: 5;
+}
+
+.chats__messages__profile-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chats__messages-card.ai-card
+  > .chats__messages__profile
+  > .chats__messages__profile-name,
+.chats__messages-card.ai-card > .chats__messages__profile-message p {
+  font-family: var(--inconsolata);
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #ffffffe0;
+}
+
+.chats__messages-card.user-card
+  > .chats__messages__profile
+  > .chats__messages__profile-name,
+.chats__messages-card.user-card > .chats__messages__profile-message p {
+  font-family: var(--roboto);
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #ffffffc0;
+}

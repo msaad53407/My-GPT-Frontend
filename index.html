@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My GPT</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./assets/bot.svg" type="image/x-icon" />
+    <script src="./js/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="sidebar__close-button">
+          <img src="./assets/close-icon.svg" alt="close-icon" />
+        </div>
+        <div class="sidebar__clock"></div>
+        <div class="sidebar__personal-info">
+          <div class="sidebar__personal-image">
+            <img src="./assets/user-black.svg" alt="user" />
+          </div>
+          <div class="sidebar__personal-name">
+            <p id="sidebar__personal-name">...</p>
+          </div>
+          <button class="sidebar__settings">
+            <img src="./assets/settings.svg" alt="settings-icon" />
+            <p>Settings</p>
+          </button>
+        </div>
+        <div class="sidebar__settings-window">
+          <div class="sidebar__personal-image sidebar__settings-image">
+            <img src="./assets/user-black.svg" alt="user-profile-picture" />
+          </div>
+          <div class="sidebar__personal-name">
+            <label for="user__name">
+              <p>Name:</p>
+              <input
+                type="text"
+                value="User"
+                name="user__name"
+                required
+                id="user__name"
+              />
+            </label>
+          </div>
+          <button
+            class="sidebar__settings button"
+            id="sidebar__settings-submit-button"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="sidebar__image-selector">
+          <div class="sidebar__images-container">
+            <div class="sidebar__image-container">
+              <img
+                src="./assets/user-black.svg"
+                alt="user-icon"
+                class="sidebar__images"
+              />
+            </div>
+            <div class="sidebar__image-container">
+              <img
+                src="./assets/dragon-black.svg"
+                alt="dragon-icon"
+                class="sidebar__images"
+              />
+            </div>
+            <div class="sidebar__image-container">
+              <img
+                src="./assets/ghost-black.svg"
+                alt="ghost-icon"
+                class="sidebar__images"
+              />
+            </div>
+            <div class="sidebar__image-container">
+              <img
+                src="./assets/horse-black.svg"
+                alt="horse-icon"
+                class="sidebar__images"
+              />
+            </div>
+            <div class="sidebar__image-container">
+              <img
+                src="./assets/spider-black.svg"
+                alt="spider-icon"
+                class="sidebar__images"
+              />
+            </div>
+          </div>
+          <button
+            class="sidebar__settings button sidebar__settings-select-button"
+          >
+            Select
+          </button>
+        </div>
+      </div>
+
+      <div class="chats__window">
+        <div class="chats__messages">
+          <div class="accessibility__icons">
+            <div class="chats__settings__toggle-button">
+              <img src="./assets/sidebar.svg" alt="sidebar-icon" />
+            </div>
+            <div class="chats__window-clock visible"></div>
+            <div class="chats__clock__toggle-button">
+              <img src="./assets/clock.svg" alt="clock-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="chats__bottom-bar">
+          <input
+            type="text"
+            placeholder="Type a message here..."
+            class="chats__bottom-bar-input"
+            id="promptInput"
+          />
+          <button class="chats__bottom-bar-send-icon">
+            <img src="./assets/send.svg" alt="send-icon" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
